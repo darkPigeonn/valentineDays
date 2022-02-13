@@ -10,7 +10,8 @@
     font-weight: 300;
     font-size: 80px;
     color: red;
-    letter-spacing: 1px;" > Happy Valentine Day Nyong </h1>
+    letter-spacing: 1px;" > Happy Valentine Day Nyong </h1> <br>
+    <p>~ Kasih itu murah hati, kasih itu percaya ~</p>
   
   </div>
 
