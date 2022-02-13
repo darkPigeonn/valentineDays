@@ -20,9 +20,11 @@
 </template>
 
 <script>
+
 export default {
   name: 'IndexPage',
   mounted() {
+    this.sound()
     this.start()
     this.love()
 
@@ -31,6 +33,9 @@ export default {
     },8000)
   },
    methods: {
+     sound() {
+        new Audio('/sss.mp3').play();
+     },
       start() {
         this.$confetti.start();
       },
