@@ -5,6 +5,21 @@
 
        <h1 class="text-xs-h1" style="font-family: candy; display: block;font-weight: 300;font-size: 80px;color: red;letter-spacing: 1px;" > Happy Valentine Day Nyong </h1> <br>
     <p>~ Kasih itu murah hati, kasih itu percaya ~</p>
+  <v-carousel
+    cycle
+    height="400"
+    :show-arrows = "false"
+  >
+    <v-carousel-item
+     v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+      reverse-transition="fade-transition"
+      transition="fade-transition"
+    >
+
+    </v-carousel-item>
+  </v-carousel>
   </div>
     <audio autoplay controls hidden>
        <source src="sss.mp3" type="audio/mpeg">
@@ -20,7 +35,24 @@
 
 export default {
   name: 'IndexPage',
-
+data () {
+      return {
+        items: [
+          {
+            src: '/noo/1.jpeg',
+          },
+          {
+            src: '/noo/2.jpeg',
+          },
+          {
+            src: '/noo/3.jpeg',
+          },
+          {
+            src: '/noo/4.jpeg',
+          },
+        ],
+      }
+    },
   mounted() {
     this.sound()
     this.start()
@@ -28,7 +60,7 @@ export default {
 
     setInterval(()=> {
       this.stop()
-    },8000)
+    },15000)
   },
    methods: {
      sound() {
