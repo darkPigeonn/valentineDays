@@ -3,11 +3,16 @@
 
   <div class="d-flex flex-column">
 
-       <h1 class="text-xs-h1" style="font-family: candy; display: block;font-weight: 300;font-size: 80px;color: red;letter-spacing: 1px;" > Happy Valentine Day Nyong </h1> <br>
+       <h1 class="text-xs-h1" style="font-family: candy; display: block;font-weight: 300;font-size: 80px;color: red;letter-spacing: 1px;" > Hai Nyong! </h1> <br>
+       <img id="img1" src = "https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" style=" visibility: hidden;">
+
+       <h3 class="text-xs-h1" style="font-family: candy; display: block;font-size: 40px;color: red;letter-spacing: 1px;" > Maukah kamu menjadi pacarku?? </h3>
+      <v-button  id ="btn_mau" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="mau()"> Mau </v-button>
+      <button id="btn_gak" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" style="position : relative" @click="gamau(this)" > Gamau </button>
     <p>~ Kasih itu murah hati, kasih itu percaya ~</p>
-  <v-carousel
+  <!-- <v-carousel
     cycle
-    height="400"
+    height="50%"
     :show-arrows = "false"
   >
     <v-carousel-item
@@ -19,7 +24,7 @@
     >
 
     </v-carousel-item>
-  </v-carousel>
+  </v-carousel> -->
   </div>
     <audio autoplay controls hidden>
        <source src="sss.mp3" type="audio/mpeg">
@@ -54,7 +59,7 @@ data () {
       }
     },
   mounted() {
-    this.sound()
+  
     this.start()
     this.love()
 
@@ -63,9 +68,18 @@ data () {
     },15000)
   },
    methods: {
-     sound() {
-
-
+     mau(){
+       const imgg = document.getElementById("img1");
+       imgg.style.visibility = "visible"
+       alert("Ego Amote Sayang!")
+     },
+     gamau (id){
+      //  const mau = document.getElementById("btn_mau");
+       const gamau =document.getElementById("btn_gak");
+      const i = Math.floor(Math.random() *5) +1 ;
+      const j = Math.floor(Math.random() *5) +70;
+      gamau.style.left = i + "px";
+      gamau.style.top = j + "px";
      },
       start() {
         this.$confetti.start();
