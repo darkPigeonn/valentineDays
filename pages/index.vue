@@ -35,7 +35,7 @@ export default {
   },
    methods: {
      sound() {
-      const audio_file = require('@/sss.mp3');
+      const audio_file = require('/sss.mp3');
       const audio = new Audio(audio_file);
       audio.play();
       console.log(audio);
