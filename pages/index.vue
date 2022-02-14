@@ -20,7 +20,7 @@
 </template>
 
 <script>
-const notificationSound = require("@/sss.mp3");
+const notificationSound = require("~/sss.mp3");
 export default {
   name: 'IndexPage',
   data() {
