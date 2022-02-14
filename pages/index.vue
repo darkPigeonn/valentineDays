@@ -20,15 +20,10 @@
 </template>
 
 <script>
-const notificationSound = require("sss.mp3");
+
 export default {
   name: 'IndexPage',
-  data() {
-    return {
-      //same as notificationSound: notificationSound,
-      notificationSound,
-    };
-  },
+ 
   mounted() {
     this.sound()
     this.start()
@@ -40,7 +35,8 @@ export default {
   },
    methods: {
      sound() {
-       var audio = new Audio(this.notificationSound);
+      const audio_file = require('@/sss.mp3');
+      const audio = new Audio(audio_file);
       audio.play();
       console.log(audio);
      
