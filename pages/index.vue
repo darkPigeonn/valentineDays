@@ -34,7 +34,7 @@ export default {
   },
    methods: {
      sound() {
-        new Audio('sss.mp3').play();
+        new Audio('/sss.mp3').play();
      },
       start() {
         this.$confetti.start();
