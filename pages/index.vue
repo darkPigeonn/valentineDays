@@ -34,7 +34,7 @@ export default {
   },
    methods: {
      sound() {
-        new Audio('/sss.mp3').play();
+        new Audio('https://soundcloud.com/atanasius-ivannoel/static-sss?si=c1c7c9886eb9430a852b336187d9dbcc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing').play();
      },
       start() {
         this.$confetti.start();
