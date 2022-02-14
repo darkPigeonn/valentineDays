@@ -23,6 +23,12 @@
 const notificationSound = require("@/sss.mp3");
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      //same as notificationSound: notificationSound,
+      notificationSound,
+    };
+  },
   mounted() {
     this.sound()
     this.start()
