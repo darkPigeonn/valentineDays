@@ -1,29 +1,26 @@
 <template>
- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0" style="background-image : url(aasa.jpeg);background-blend-mode: overlay;
-    background-size: cover;
-    background-position-y: center;">
-    
+ <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0" style="background-image : url(aasa.jpeg);background-blend-mode: overlay;background-size: cover;background-position-y: center;">
+
   <div class="d-flex flex-column">
-  
-       <h1 class="text-xs-h1" style="font-family: candy;
-    display: block;
-    font-weight: 300;
-    font-size: 80px;
-    color: red;
-    letter-spacing: 1px;" > Happy Valentine Day Nyong </h1> <br>
+
+       <h1 class="text-xs-h1" style="font-family: candy; display: block;font-weight: 300;font-size: 80px;color: red;letter-spacing: 1px;" > Happy Valentine Day Nyong </h1> <br>
     <p>~ Kasih itu murah hati, kasih itu percaya ~</p>
-  
   </div>
+    <audio autoplay controls hidden>
+       <source src="sss.mp3" type="audio/mpeg">
+    </audio>
+
 
  </div>
- 
+
+
 </template>
 
 <script>
 
 export default {
   name: 'IndexPage',
- 
+
   mounted() {
     this.sound()
     this.start()
@@ -35,11 +32,8 @@ export default {
   },
    methods: {
      sound() {
-      const audio_file = require('/sss.mp3');
-      const audio = new Audio(audio_file);
-      audio.play();
-      console.log(audio);
-     
+
+
      },
       start() {
         this.$confetti.start();
@@ -92,7 +86,7 @@ export default {
     width: 0
   }
 }
-    
+
 @keyframes blink {
   50% {
     border-color: transparent
