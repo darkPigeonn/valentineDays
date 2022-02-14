@@ -20,7 +20,7 @@
 </template>
 
 <script>
-
+const notificationSound = require("@/sss.mp3");
 export default {
   name: 'IndexPage',
   mounted() {
@@ -34,7 +34,10 @@ export default {
   },
    methods: {
      sound() {
-        new Audio('https://soundcloud.com/atanasius-ivannoel/static-sss?si=c1c7c9886eb9430a852b336187d9dbcc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing').play();
+       var audio = new Audio(this.notificationSound);
+      audio.play();
+      console.log(audio);
+     
      },
       start() {
         this.$confetti.start();
